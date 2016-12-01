@@ -35,7 +35,7 @@ public class TaobaoConverterFactory extends Converter.Factory {
     public Converter<ResponseBody, ?> responseBodyConverter(Type type, Annotation[] annotations,
                                                             Retrofit retrofit) {
         TypeAdapter<?> adapter = gson.getAdapter(TypeToken.get(type));
-        return new TaoBaoGsonResponseBodyConverter<>(gson, adapter);
+        return new TaoBaoGsonResponseBodyConverter<>();
     }
 
     @Override
